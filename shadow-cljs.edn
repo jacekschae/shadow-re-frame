@@ -1,0 +1,24 @@
+{:source-paths ["src"]
+
+ :dependencies [[binaryage/devtools "0.9.10"]
+                [proto-repl "0.3.1"]
+                [reagent "0.8.1"]
+                [re-frame "0.10.6"]
+                [day8.re-frame/re-frame-10x "0.3.3-react16"]]
+
+ :nrepl        {:port 3333}
+
+ :builds
+ {:app {:target :browser
+        :output-dir "public/js"
+        :asset-path "/js"
+
+        :modules {:main {:init-fn app.core/init}}
+
+        :compiler-options {:closure-warnings {:global-this :off}
+                           :closure-defines {re-frame.trace/trace-enabled? true
+                                             day8.re-frame.tracing/trace-enabled? true}}
+
+        :devtools {:http-root   "public"
+                   :http-port   3000
+                   :preloads    [day8.re-frame-10x.preload]}}}}

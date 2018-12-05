@@ -1,0 +1,31 @@
+{
+  "name": "shadow-re-frame",
+  "version": "0.0.1",
+  "description": "Template for shadow-cljs and re-frame projects",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacekschae/shadow-re-frame"
+  },
+  "author": {
+    "name": "Jacek Schae",
+    "email": "jacek.schae@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "shadow-cljs watch app",
+    "release": "shadow-cljs release app",
+    "server": "shadow-cljs server",
+    "clean": "rm -rf target && rm -rf public/js",
+    "clean-win": "rmdir /s /q public/js & rmdir /s /q target"
+  },
+  "dependencies": {
+    "create-react-class": "^15.6.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "react-flip-move": "^3.0.2",
+    "react-highlight.js": "^1.0.7",
+    "shadow-cljs": "^2.7.8"
+  }
+}
